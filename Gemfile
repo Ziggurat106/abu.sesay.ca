@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'ruby', '2.0.0'
+ruby '2.0.0'
 gem 'rails', '4.0.0.beta1'
-#gem 'activesupport', '~>4.0.0.beta1'
-
+gem 'activesupport', '~>4.0.0.beta1'
 
 gem 'heroku'
 gem 'foreman'
@@ -25,5 +24,5 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 
 group :production do
-  gem 'pg'
+ gem 'pg'
 end
