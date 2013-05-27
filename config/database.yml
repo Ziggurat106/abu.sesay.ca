@@ -1,20 +1,20 @@
 development:
   adapter: postgresql
-  database: abu_dev
-  username: abu 
-  password: Aardvark31
+  database: abs_dev 
+  username: rails_dev 
+  password: ruby* 
   host: localhost
 
 test:
   adapter: postgresql
-  database: abu_test
-  username: abu 
-  password:  Aardvark31
+  database: abs_tst 
+  username: rails_dev 
+  password: ruby* 
   host: localhost
 
 production:
    adapter: postgresql
-   database: abu_live
+   database: abs_pro 
    username: abu 
-   password: Aardvark31
+   password: ruby* 
    host: localhost

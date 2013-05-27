@@ -20,3 +20,5 @@
 .project
 .DS_Store
 .idea
+/db/migrate
+/test
