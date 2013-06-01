@@ -7,6 +7,7 @@ gem 'bcrypt-ruby' , '~> 3.0.0'
 
 gem 'heroku'
 gem 'foreman'
+gem 'annotate'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
