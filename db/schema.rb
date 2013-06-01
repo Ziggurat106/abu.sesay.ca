@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130527042151) do
+ActiveRecord::Schema.define(version: 20130601034400) do
 
   create_table "administrators", force: true do |t|
     t.string   "username"
@@ -28,10 +28,25 @@ ActiveRecord::Schema.define(version: 20130527042151) do
     t.datetime "updated_at"
   end
 
+  create_table "galleries_images", id: false, force: true do |t|
+    t.integer "gallery_id", null: false
+    t.integer "image_id",   null: false
+  end
+
+  create_table "galleries_tags", id: false, force: true do |t|
+    t.integer "gallery_id", null: false
+    t.integer "tag_id",     null: false
+  end
+
   create_table "images", force: true do |t|
     t.string   "caption"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "images_posts", id: false, force: true do |t|
+    t.integer "image_id", null: false
+    t.integer "post_id",  null: false
   end
 
   create_table "posts", force: true do |t|
@@ -46,6 +61,11 @@ ActiveRecord::Schema.define(version: 20130527042151) do
   create_table "posts_tags", id: false, force: true do |t|
     t.integer "post_id", null: false
     t.integer "tag_id",  null: false
+  end
+
+  create_table "posts_users", id: false, force: true do |t|
+    t.integer "post_id", null: false
+    t.integer "user_id", null: false
   end
 
   create_table "tags", force: true do |t|
